@@ -31,8 +31,24 @@ Ada dua macam tipe data, yaitu tipe data primitif dan tipe data composite
      "087912345609", "Lorem Ipsum Dolor Sit Amet"
    
    . Boolean
-     Boolean adalah tipe data yang menyatakan true (benar) atau false (salah).
-2. Tipe data abstrak merupakan sebuah tipe data yang didefinisikan
+     Boolean adalah tipe data yang menyatakan true (benar) atau false (salah)
+   
+2. Tipe data abstrak merupakan sebuah tipe data yang didefinisikan oleh sekelompok operasi atau metode yang dapat dilakukan pada data tersebut.
+   Tipe data abstrak tidak mengungkapkan implementasi dari metode tersebut, melainkan hanya memberikan deskripsi fungsional tentang cara kerja dari tipe data tersebut.
+   Konsep tipe data abstrak Tipe data abstrak pada dasarnya merupakan sebuah kelas yang digunakan untuk merepresentasikan sebuah objek, yang terdiri dari berbagaI
+   tipe data yang didefinisikan bersama dengan metode atau operasi yang diperbolehkan untuk dilakukan pada objek tersebut. Tipe data abstrak menyembunyikan detaiL
+   implementasi dari metode atau operasi yang digunakan, sehingga memungkinkan pemrogram untuk menggunakan tipe data tersebut tanpa harus tahu bagaimana detail implementasinya.
+   
+3. Tipe Data Kolektif
+   Koleksi adalah tipe data yang berupa rangkaian atau kumpulan data yang berindeks. Terdapat tiga tipe dasar koleksi di Java yaitu:
+   
+   . Array : koleksi statis dengan ukuran tetap dan hanya bisa mengelompokkan tipe data yang sama.
+   
+   . List : koleksi dinamis dengan ukuran adaptif dan bisa mengelompokkan tipe data yang sama ataupun berbeda.
+   
+   . Map : koleksi dinamis dengan ukuran adaptif dan bisa mengelompokkan tipe data yang sama ataupun berbeda dengan menggunakan pasangan <key, value>.
+   
+
    
 ## Guided 
 
