@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul 1 Tipe Data</h1>
 <p align="center">Lutfiana Isnaeni Lathifah</p>
 <p align="center">231102165</p>
 
