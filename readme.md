@@ -2,7 +2,6 @@
 <p align="center">Lutfiana Isnaeni Lathifah(2311102165)</p>
 
 ## Dasar Teori
-
 Tipe data adalah klasifikasi value suatu variabel yang membantu operasi komputer untuk mengenali nilai data tanpa menghasilkan output error. 
 Tipe data memudahkan program dalam mendekteksi berbagai jenis informasi. Pada dasarnya komputer hanya memahami bahasa biner yaitu 1 dan 0. Dalam sistem pemograman,
 data diklasifikasikan menjadi berbagai jenis agar dapat ditafsirkan, disusun, dan digunakan dalam software.
@@ -13,24 +12,24 @@ Ada dua macam tipe data, yaitu tipe data primitif dan tipe data composite
    tipe data primitif adalah tipe data sederhana. Tipe data ini bisa menyimpan satu nilai seperti digit, byte, atau karakter. Beberapa macam tipe data 
    primitif:
    
-   . Integer
+   - Integer
      Integer atau bilangan bulat adalah tipe data data primitif yang digunakan untuk angka tanpa pecahan. Tipe data ini tidak memiliki pecahan desimal. 
      Bilangan bulat bisa berupa negatif atau positif.
    
-   . Floating Point
+   - Floating Point
      floating point adalah tipe data numerik yang menyatakan angka dengan nominal pecahan. contohnya: 98.5, 0.078, 9.36
    
-   . character
+   - character
      Character adalah tipe data yang digunakan untuk menyatakan suatu angka, huruf, atau special character.
      Contohnya: %, 5, q, @
    
-   . String
+   - String
      String adalah tipe data yang menyatakan rangkaian character, angka, atau simbol-dan selalu diperlakukan sebagai teks. Tipe data string tidak bisa
      dipakai untuk operasi perhitungan matematis.
      contohnya: "Halo John Mayer"
      "087912345609", "Lorem Ipsum Dolor Sit Amet"
    
-   . Boolean
+   - Boolean
      Boolean adalah tipe data yang menyatakan true (benar) atau false (salah)
    
 2. Tipe data abstrak merupakan sebuah tipe data yang didefinisikan oleh sekelompok operasi atau metode yang dapat dilakukan pada data tersebut.
@@ -48,7 +47,6 @@ Ada dua macam tipe data, yaitu tipe data primitif dan tipe data composite
    
    . Map : koleksi dinamis dengan ukuran adaptif dan bisa mengelompokkan tipe data yang sama ataupun berbeda dengan menggunakan pasangan <key, value>.
    
-
    
 ## Guided 
 
