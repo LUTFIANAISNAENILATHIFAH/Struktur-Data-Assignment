@@ -138,7 +138,7 @@ Kode ini mengisi nilai ke dalam struct dan mencetak isi struct tersebut.Dalam ko
 menggunakan struct untuk menyimpan data mahasiswa. Struct ini memiliki tiga anggota:
 nama, alamat, dan umur. Kemudian, mengisi nilai ke dalam struct dan mencetak isi struct tersebut.
 
-### 3. [Tipe Data Koleksi]
+### 3. [Tipe Data Kolektif]
 
 ```C++
 #include <iostream>
