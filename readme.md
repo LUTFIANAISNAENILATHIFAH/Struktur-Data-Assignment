@@ -355,7 +355,9 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Tipe data merupakan klasifikasi nilai dalam pemrograman yang membantu komputer mengenali data tanpa menghasilkan error. Ini memungkinkan program untuk menginterpretasikan, menyusun, dan menggunakan informasi yang beragam dengan lebih efisien. Ada dua kategori utama tipe data: primitif dan composite. Tipe data primitif, seperti integer, floating point, character, string, dan boolean, menyimpan nilai tunggal seperti angka, karakter, atau kebenaran. Di sisi lain, tipe data abstrak dan kolektif memberikan kerangka kerja untuk merepresentasikan objek dan kumpulan data dengan operasi terkait, seperti kelas yang menyembunyikan detail implementasinya atau koleksi seperti array, list, dan map yang memungkinkan penyimpanan dan manipulasi data secara dinamis dan terstruktur.
+
+Secara keseluruhan, pemahaman tentang berbagai tipe data memungkinkan pengembang untuk memilih dan menggunakan struktur data yang tepat sesuai dengan kebutuhan aplikasi mereka. Dengan demikian, hal ini membantu dalam mengoptimalkan kinerja program dan meningkatkan efisiensi dalam pengelolaan data serta operasi yang terkait.[1].
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
