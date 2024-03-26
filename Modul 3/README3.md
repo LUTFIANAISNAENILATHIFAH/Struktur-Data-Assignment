@@ -627,29 +627,318 @@ int main() {
 }
 ```
 
-
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided1.png)
 
-Kode di atas adalah 
-
+Program di atas mendefinisikan sebuah struktur data Node yang menyimpan informasi tentang nama dan usia seseorang serta alamat dari node berikutnya. Selain itu, terdapat kelas LinkedList yang memiliki beberapa fungsi untuk manipulasi linked list, seperti menyisipkan node di awal, di belakang, di antara dua node, menghapus node berdasarkan nama, mengubah data node berdasarkan nama, dan menampilkan seluruh data dalam linked list. Dalam main() function, linked list dibuat dan diisi dengan beberapa data. Kemudian, beberapa operasi dilakukan seperti penghapusan data, penambahan data di antara dua node tertentu, penambahan data di awal, dan pengubahan data. Hasil akhir dari operasi-operasi tersebut kemudian ditampilkan.
 ## Unguided 
 
-### 2. [Soal]
-C++
+### 2. [Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga. Nama Produk Harga Originote 60.000 Somethinc 150.000 Skintific 100.000 Wardah 50.000 Hanasui 30.000 Case: 1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific 2. Hapus produk wardah 3. Update produk Hanasui menjadi Cleora dengan harga 55.000 4. Tampilkan menu seperti dibawah ini Toko Skincare Purwokerto 1. Tambah Data 2. Hapus Data 3. Update Data 4. Tambah Data Urutan Tertentu 5. Hapus Data Urutan Tertentu 6. Hapus Seluruh Data 7. Tampilkan Data 8. Exit Pada menu 7, tampilan akhirnya akan menjadi seperti dibawah ini : Nama Produk Harga Originote 60.000 Somethinc 150.000 Azarine 65.000 Skintific 100.000 Cleora 55.00]
+
+
+```C++
+// Lutfiana Isnaeni Lathifah
+// 2311102165
+
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+struct Node
+{
+    string namaProduk;
+    int harga;
+    Node *prev;
+    Node *next;
+};
+
+class LinkedList
+{
+private:
+    Node *head;
+    Node *tail;
+
+public:
+    LinkedList()
+    {
+        head = NULL;
+        tail = NULL;
+    }
+
+    void tambahData(string nama, int harga)
+    {
+        Node *newNode = new Node;
+        newNode->namaProduk = nama;
+        newNode->harga = harga;
+        newNode->prev = NULL;
+        newNode->next = NULL;
+
+        if (head == NULL)
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    }
+
+    void hapusData(string nama)
+    {
+        Node *current = head;
+        while (current != NULL)
+        {
+            if (current->namaProduk == nama)
+            {
+                if (current == head && current == tail)
+                {
+                    head = NULL;
+                    tail = NULL;
+                }
+                else if (current == head)
+                {
+                    head = head->next;
+                    head->prev = NULL;
+                }
+                else if (current == tail)
+                {
+                    tail = tail->prev;
+                    tail->next = NULL;
+                }
+                else
+                {
+                    current->prev->next = current->next;
+                    current->next->prev = current->prev;
+                }
+                delete current;
+                return;
+            }
+            current = current->next;
+        }
+        cout << "Produk tidak ditemukan." << endl;
+    }
+
+    void updateData(string nama, string newNama, int newHarga)
+    {
+        Node *current = head;
+        while (current != NULL)
+        {
+            if (current->namaProduk == nama)
+            {
+                current->namaProduk = newNama;
+                current->harga = newHarga;
+                return;
+            }
+            current = current->next;
+        }
+        cout << "Produk tidak ditemukan." << endl;
+    }
+
+    void tambahDataUrutanTertentu(string nama, int harga, string namaSebelum, string namaSesudah)
+    {
+        Node *newNode = new Node;
+        newNode->namaProduk = nama;
+        newNode->harga = harga;
+        newNode->prev = NULL;
+        newNode->next = NULL;
+
+        Node *current = head;
+        while (current != NULL)
+        {
+            if (current->namaProduk == namaSebelum)
+            {
+                newNode->prev = current;
+                newNode->next = current->next;
+                current->next = newNode;
+                if (newNode->next != NULL)
+                {
+                    newNode->next->prev = newNode;
+                }
+                else
+                {
+                    tail = newNode;
+                }
+                return;
+            }
+            if (current->namaProduk == namaSesudah && current->next != NULL)
+            {
+                newNode->prev = current;
+                newNode->next = current->next;
+                current->next = newNode;
+                newNode->next->prev = newNode;
+                return;
+            }
+            current = current->next;
+        }
+        cout << "Produk tidak ditemukan." << endl;
+    }
+
+    void hapusDataUrutanTertentu(string nama)
+    {
+        Node *current = head;
+        while (current != NULL)
+        {
+            if (current->namaProduk == nama)
+            {
+                if (current == head && current == tail)
+                {
+                    head = NULL;
+                    tail = NULL;
+                }
+                else if (current == head)
+                {
+                    head = head->next;
+                    head->prev = NULL;
+                }
+                else if (current == tail)
+                {
+                    tail = tail->prev;
+                    tail->next = NULL;
+                }
+                else
+                {
+                    current->prev->next = current->next;
+                    current->next->prev = current->prev;
+                }
+                delete current;
+                return;
+            }
+            current = current->next;
+        }
+        cout << "Produk tidak ditemukan." << endl;
+    }
+
+    void hapusSeluruhData()
+    {
+        Node *current = head;
+        while (current != NULL)
+        {
+            Node *temp = current;
+            current = current->next;
+            delete temp;
+        }
+        head = NULL;
+        tail = NULL;
+    }
+
+    void tampilkanData()
+    {
+        Node *current = head;
+        cout << "Nama Produk Harga" << endl;
+        while (current != NULL)
+        {
+            cout << current->namaProduk << " " << current->harga << endl;
+            current = current->next;
+        }
+    }
+};
+
+int main()
+{
+    LinkedList linkedList;
+
+    int pilihan;
+    string nama, newName, namaSebelum, namaSesudah;
+    double harga, newHarga;
+
+    linkedList.tambahData("Originote", 60000);
+    linkedList.tambahData("Somethinc", 150000);
+    linkedList.tambahData("Skintific", 100000);
+    linkedList.tambahData("Wardah", 50000);
+    linkedList.tambahData("Hanasui", 30000);
+
+    do
+    {
+        cout << "Toko Skincare Purwokerto" << endl;
+        cout << "1. Tambah Data" << endl;
+        cout << "2. Hapus Data" << endl;
+        cout << "3. Update Data" << endl;
+        cout << "4. Tambah Data Urutan Tertentu" << endl;
+        cout << "5. Hapus Data Urutan Tertentu" << endl;
+        cout << "6. Hapus Seluruh Data" << endl;
+        cout << "7. Tampilkan Data" << endl;
+        cout << "8. Exit" << endl;
+
+        cout << "Masukan menu pilihan anda : ";
+        cin >> pilihan;
+
+        switch (pilihan)
+        {
+        case 1:
+            cout << "Nama Produk: ";
+            cin >> nama;
+            cout << "Harga: ";
+            cin >> harga;
+            linkedList.tambahData(nama, harga);
+            linkedList.tampilkanData();
+            break;
+        case 2:
+            cout << "Nama Produk yang akan dihapus: ";
+            cin >> nama;
+            linkedList.hapusData(nama);
+            break;
+        case 3:
+            cout << "Nama Produk yang akan diupdate: ";
+            cin >> nama;
+            cout << "Nama Baru: ";
+            cin >> newName;
+            cout << "Harga Baru: ";
+            cin >> newHarga;
+            linkedList.updateData(nama, newName, newHarga);
+            linkedList.tampilkanData();
+            break;
+        case 4:
+            cout << "Nama Produk: ";
+            cin >> nama;
+            cout << "Harga: ";
+            cin >> harga;
+            cout << "Produk Sebelumnya: ";
+            cin >> namaSebelum;
+            cout << "Produk Setelahnya: ";
+            cin >> namaSesudah;
+            linkedList.tambahDataUrutanTertentu(nama, harga, namaSebelum, namaSesudah);
+            linkedList.tampilkanData();
+            break;
+        case 5:
+            cout << "Nama Produk yang akan dihapus: ";
+            cin >> nama;
+            linkedList.hapusDataUrutanTertentu(nama);
+            linkedList.tampilkanData();
+            break;
+        case 6:
+            linkedList.hapusSeluruhData();
+            cout << "Seluruh data telah dihapus." << endl;
+            break;
+        case 7:
+            linkedList.tampilkanData();
+            break;
+        default:
+            cout << "Exit" << endl;
+        }
+    } while (pilihan != 7);
     return 0;
 }
-
+```
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.1.png)
 
-Kode di atas adalah 
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.2.png)
+
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.3.png)
+
+
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.4.png)
+
+
+Program ini adalah sebuah simulasi dari aplikasi toko skincare di Purwokerto yang memungkinkan pengguna untuk melakukan berbagai operasi seperti menambah, menghapus, mengupdate data produk, serta menghapus seluruh data atau menampilkan seluruh produk yang tersedia. Struktur data utamanya adalah Node, yang memiliki informasi tentang nama produk dan harga, serta dua pointer yang menunjuk ke node sebelumnya dan node selanjutnya dalam linked list. Kelas LinkedList mengatur operasi-operasi seperti penambahan data, penghapusan data, pembaruan data, dan operasi khusus seperti penambahan data pada urutan tertentu atau penghapusan data pada urutan tertentu. Dalam main() function, program memulai dengan membuat objek dari kelas LinkedList dan memasukkan beberapa data produk skincare sebagai contoh awal. Kemudian, program meminta input dari pengguna untuk melakukan operasi-operasi yang diinginkan, seperti menambah data baru, menghapus data, mengupdate data, dan lain-lain, dan kemudian menampilkan hasilnya. Perulangan do-while memungkinkan pengguna untuk terus melakukan operasi hingga memilih untuk keluar dari program dengan memilih opsi "Exit".
+
+
+
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
