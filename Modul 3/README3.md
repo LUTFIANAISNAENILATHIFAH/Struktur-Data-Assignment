@@ -939,14 +939,9 @@ int main()
 ![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/ss%20code%20unguided2.png)
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.1.png)
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/Screenshot%20ungaided%202.1....png)
 
-![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.2.png)
-
-![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.3.png)
-
-
-![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.4.png)
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/Screenshot%20ungaided%202.2....png)
 
 
 Program ini adalah sebuah simulasi dari aplikasi toko skincare di Purwokerto yang memungkinkan pengguna untuk melakukan berbagai operasi seperti menambah, menghapus, mengupdate data produk, serta menghapus seluruh data atau menampilkan seluruh produk yang tersedia. Struktur data utamanya adalah Node, yang memiliki informasi tentang nama produk dan harga, serta dua pointer yang menunjuk ke node sebelumnya dan node selanjutnya dalam linked list. Kelas LinkedList mengatur operasi-operasi seperti penambahan data, penghapusan data, pembaruan data, dan operasi khusus seperti penambahan data pada urutan tertentu atau penghapusan data pada urutan tertentu. Dalam main() function, program memulai dengan membuat objek dari kelas LinkedList dan memasukkan beberapa data produk skincare sebagai contoh awal. Kemudian, program meminta input dari pengguna untuk melakukan operasi-operasi yang diinginkan, seperti menambah data baru, menghapus data, mengupdate data, dan lain-lain, dan kemudian menampilkan hasilnya. Perulangan do-while memungkinkan pengguna untuk terus melakukan operasi hingga memilih untuk keluar dari program dengan memilih opsi "Exit".
