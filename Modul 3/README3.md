@@ -636,6 +636,8 @@ int main() {
     return 0;
 }
 ```
+#### Sreenshot Code:
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/ss%20code%20unguided1.png)
 
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided1.png)
@@ -933,6 +935,8 @@ int main()
     return 0;
 }
 ```
+#### Sreenshot Code:
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/ss%20code%20unguided2.png)
 
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%203/img/unguided2.1.png)
