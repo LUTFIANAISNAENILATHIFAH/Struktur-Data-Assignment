@@ -5,7 +5,17 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Linked List adalah suatu cara untuk menyimpan data dengan struktur sehingga programmer dapat secara otomatis menciptakan suatu tempat baru untuk menyimpan Click or tap here to enter text.data kapan saja diperlukan. Linked list dikenal juga dengan sebutan senarai berantai adalah stuktur data yang terdiri dari urutan record data dimana setiap record memiliki field yang menyimpan alamat/referensi dari record selanjutnya (dalam urutan). Elemen data yang dihubungkan dengan link pada linked list disebut Node. Biasanya dalam suatu linked list, terdapat istilah head dan tail . 1. Head adalah elemen yang berada pada posisi pertama dalam suatu linked list 2. Tail adalah elemen yang berada pada posisi terakhir dalam suatu linked list.
+ Jenis Linked List yang dipelajari dalam praktikum :
+ 
+1.	Single Linked List
+   
+Single Linked List merupakan suatu linked list yang hanya memiliki satu variabel pointer saja. Dimana pointer tersebut menunjuk ke node selanjutnya. Single linked list terdiri dari serangkaian simpul, di mana setiap simpul memiliki dua bagian: data dan tautan ke simpul berikutnya dalam urutan. Dimulai dengan simpul kepala, yang menunjuk ke simpul pertama dalam daftar. Biasanya field pada tail menunjuk ke NULL[1] .
+
+3.	Double Lingked List
+   
+Double Linked List Circular adalah linked list dengan menggunakan pointer, dimana setiap node memiliki 3 field, yaitu: - 1 field pointer yang menunjuk pointer berikutnya (next), - 1 field menunjuk pointer sebelumnya (prev), - serta sebuah field yang berisi data untuk node tersebut. Double Linked List Circular pointer next dan prev nya menunjuk ke dirinya sendiri secara circular. Setiap node pada linked list mempunyai field yang berisi data dan pointer ke node berikutnya dan ke node sebelumnya. Untuk pembentukan node baru, mulanya pointer next dan prev akan menunjuk ke dirinya sendiri. Jika sudah lebih dari satu node, maka pointer prev akan menunjuk ke node sebelumnya, dan pointer next akan menunjuk ke node sesudahnya. Semua sel yang terdapat pada list disambungkan dengan pointer, sedangkan tiap sel memiliki tiga komponen yaitu value, pointer ke sel sebelumnya dan pointer ke sel berikutnya. Dengan memiliki dua buah pointer ini, maka doubly-linked list dapat diakses dengan dua arah, ke arah depan dan ke belakang. Dibutuhkan dua buah variabel pointer yaitu head dan tail. Head akan selalu menunjuk pada node pertama, sedangkan tail akan selalu menunjuk pada node terakhir [2].
+
 
 ## Guided 
 
@@ -941,7 +951,16 @@ Program ini adalah sebuah simulasi dari aplikasi toko skincare di Purwokerto yan
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Linked list adalah struktur data yang memungkinkan programmer untuk menyimpan dan mengakses data secara dinamis dengan menciptakan tempat baru untuk menyimpan data kapan saja diperlukan. 
 
+Ada dua jenis utama dari linked list yang dipelajari dalam praktikum, yaitu:
+
+1. Single Linked List: Memiliki satu variabel pointer yang menunjuk ke node selanjutnya dalam urutan. Setiap node memiliki dua bagian: data dan tautan ke node berikutnya. Linked list ini dimulai dengan simpul kepala dan biasanya diakhiri dengan NULL.
+   
+3. Double Linked List: Setiap node memiliki tiga field: pointer ke node berikutnya (next), pointer ke node sebelumnya (prev), dan data untuk node tersebut. Circular Double Linked List memiliki pointer next dan prev yang menunjuk ke dirinya sendiri secara circular. Ini memungkinkan akses ke linked list dari depan dan belakang. Linked list ini memerlukan dua variabel pointer, yaitu head dan tail, yang masing-masing menunjuk ke node pertama dan terakhir.
+
+Kedua jenis linked list ini memberikan fleksibilitas dalam mengakses dan memanipulasi data, dengan kelebihan masing-masing sesuai dengan kebutuhan aplikasi. Single Linked List lebih sederhana dan membutuhkan lebih sedikit ruang, sementara Double Linked List memungkinkan akses ke data dari kedua arah namun memerlukan sedikit lebih banyak ruang untuk menyimpan pointer tambahan.
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1]	M. B. Ulum, “Modul Kuliah Struktur Data,” Tek. Inform., 2018.
+
+[2]	M. Yulianti, “Double Linked List Sirkural,” Fak. Komput., pp. 1–14, 2019.
