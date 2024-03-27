@@ -5,7 +5,7 @@
 
 ## Dasar Teori
 
-Linked List adalah suatu cara untuk menyimpan data dengan struktur sehingga programmer dapat secara otomatis menciptakan suatu tempat baru untuk menyimpan Click or tap here to enter text.data kapan saja diperlukan. Linked list dikenal juga dengan sebutan senarai berantai adalah stuktur data yang terdiri dari urutan record data dimana setiap record memiliki field yang menyimpan alamat/referensi dari record selanjutnya (dalam urutan). Elemen data yang dihubungkan dengan link pada linked list disebut Node. Biasanya dalam suatu linked list, terdapat istilah head dan tail . 1. Head adalah elemen yang berada pada posisi pertama dalam suatu linked list 2. Tail adalah elemen yang berada pada posisi terakhir dalam suatu linked list.
+Linked list dikenal juga dengan sebutan senarai berantai adalah stuktur data yang terdiri dari urutan record data dimana setiap record memiliki field yang menyimpan alamat/referensi dari record selanjutnya (dalam urutan). Elemen data yang dihubungkan dengan link pada linked list disebut Node. Biasanya dalam suatu linked list, terdapat istilah head dan tail 1. Head adalah elemen yang berada pada posisi pertama dalam suatu linked list 2. Tail adalah elemen yang berada pada posisi terakhir dalam suatu linked list.
  Jenis Linked List yang dipelajari dalam praktikum :
  
 1.	Single Linked List
