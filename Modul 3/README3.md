@@ -12,7 +12,7 @@ Linked list dikenal juga dengan sebutan senarai berantai adalah stuktur data yan
    
 Single Linked List merupakan suatu linked list yang hanya memiliki satu variabel pointer saja. Dimana pointer tersebut menunjuk ke node selanjutnya. Single linked list terdiri dari serangkaian simpul, di mana setiap simpul memiliki dua bagian: data dan tautan ke simpul berikutnya dalam urutan. Dimulai dengan simpul kepala, yang menunjuk ke simpul pertama dalam daftar. Biasanya field pada tail menunjuk ke NULL[1] .
 
-3.	Double Lingked List
+2.	Double Lingked List
    
 Double Linked List Circular adalah linked list dengan menggunakan pointer, dimana setiap node memiliki 3 field, yaitu: - 1 field pointer yang menunjuk pointer berikutnya (next), - 1 field menunjuk pointer sebelumnya (prev), - serta sebuah field yang berisi data untuk node tersebut. Double Linked List Circular pointer next dan prev nya menunjuk ke dirinya sendiri secara circular. Setiap node pada linked list mempunyai field yang berisi data dan pointer ke node berikutnya dan ke node sebelumnya. Untuk pembentukan node baru, mulanya pointer next dan prev akan menunjuk ke dirinya sendiri. Jika sudah lebih dari satu node, maka pointer prev akan menunjuk ke node sebelumnya, dan pointer next akan menunjuk ke node sesudahnya. Semua sel yang terdapat pada list disambungkan dengan pointer, sedangkan tiap sel memiliki tiga komponen yaitu value, pointer ke sel sebelumnya dan pointer ke sel berikutnya. Dengan memiliki dua buah pointer ini, maka doubly-linked list dapat diakses dengan dua arah, ke arah depan dan ke belakang. Dibutuhkan dua buah variabel pointer yaitu head dan tail. Head akan selalu menunjuk pada node pertama, sedangkan tail akan selalu menunjuk pada node terakhir [2].
 
