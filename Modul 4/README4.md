@@ -337,7 +337,7 @@ int main()
 ```
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%204/img/outputguided1.png)
 
 Kode di atas digunakan untuk membuat dan mengelola sebuah linked list non circular. Program ini menyediakan berbagai fungsi seperti menambahkan elemen di depan, di belakang, di tengah, menghapus elemen di depan, di belakang, di tengah, mengubah nilai elemen di depan, di belakang, atau di tengah, menghitung jumlah elemen dalam list, serta membersihkan seluruh isi list.
 
@@ -601,7 +601,7 @@ int main()
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%204/img/ssunguided2.png)
 
 Kode di atas digunakan untuk mengimplementasikan operasi dasar pada sebuah single linked list circular yang mencakup operasi seperti penambahan elemen di depan, di belakang, di tengah, penghapusan elemen di depan, di belakang, dan di tengah, serta operasi lain seperti membersihkan seluruh list dan menampilkan isi list.
 
