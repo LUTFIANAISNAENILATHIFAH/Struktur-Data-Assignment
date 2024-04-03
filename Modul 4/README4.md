@@ -4,7 +4,21 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+1.	Linked List Non Circular
+
+Single linked list non circular adalah struktur data di mana setiap elemen atau node dalam list terhubung dengan node berikutnya secara sekuensial, tetapi tidak memiliki koneksi kembali ke node sebelumnya. Dengan kata lain, setiap node hanya memiliki referensi atau pointer ke node berikutnya dalam urutan, dan node terakhir menunjuk ke nilai null untuk menandakan akhir dari daftar. Ini berbeda dengan linked list sirkular di mana node terakhir terhubung kembali ke node pertama, menciptakan lingkaran.
+
+Double lingked list non circular
+
+Double Linked List Circular adalah linked list dengan menggunakan pointer, dimana setiap node memiliki 3 field, yaitu 1 field pointer yang menunjuk pointer berikutnya (next), 1 field menunjuk pointer sebelumnya (prev), serta sebuah field yang berisi data untuk node tersebut. Double Linked List Circular 
+pointer next dan prev-nya menunjuk ke dirinya sendiri secara circular [1].
+
+2. Circular Linked List
+
+Circular linked list  merupakan suatu linked list dimana tail (node terakhir) menunjuk ke head (node pertama). Jadi tidak ada pointer yang menunjuk NULL. Ada 2 jenis Circular Linked List [2], yaitu :
+
+![240302_00h00m06s_screenshot](![image](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/assets/162521063/dfaebab3-c22a-47d7-93c8-89070a882c9d)
+
 
 ## Guided 
 
@@ -1043,7 +1057,12 @@ Kode di atas merupakan single Linked List Circular untuk menyimpan informasi ten
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+1. Circular Linked List adalah jenis linked list di mana tail (node terakhir) menunjuk kembali ke head (node pertama), membentuk lingkaran tanpa pointer yang menunjuk ke NULL.
+2. Ada dua jenis Circular Linked List:
+   a. Single Circular Linked List: Setiap node dalam linked list menunjuk hanya ke node berikutnya, dan node terakhir menunjuk kembali ke node pertama.
+   b. Double Circular Linked List: Setiap node memiliki dua pointer, satu yang menunjuk ke node berikutnya dan satu yang menunjuk ke node sebelumnya, dengan node terakhir menunjuk kembali ke node pertama, membentuk lingkaran.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1]	Aria Sakti Nugraha, “Artikel Double Linked List Circulate (DLLC),” Fakultas Komputer, pp. 1–8, Mar. 2019.
+[2]	M. B. Ulum, S. Kom, and M. Kom, “Modul Kuliah Struktur Data Linked List,” 2018.
+ 
