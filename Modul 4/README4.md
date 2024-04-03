@@ -1064,5 +1064,6 @@ Kode di atas merupakan single Linked List Circular untuk menyimpan informasi ten
 
 ## Referensi
 [1]	Aria Sakti Nugraha, “Artikel Double Linked List Circulate (DLLC),” Fakultas Komputer, pp. 1–8, Mar. 2019.
+
 [2]	M. B. Ulum, S. Kom, and M. Kom, “Modul Kuliah Struktur Data Linked List,” 2018.
  
