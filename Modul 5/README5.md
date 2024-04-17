@@ -53,18 +53,6 @@ d)	Operasi dalam Stuktur Data Hash Table
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Guided 
 
 ### 1. [Guided 1]
@@ -332,24 +320,155 @@ dan print isi hash table. Dalam main, data karyawan dimasukkan, dicari, dan diha
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. [Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai. Dengan ketentuan: a. Setiap mahasiswa memiliki NIM dan nilai. b. Program memiliki tampilan pilihan menu berisi poin C. c. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan rentang nilai (80-90).]
 
-C++
+```C++
+// Lutfiana Isnaeni Lathifah 
+// 2311102165
+
 #include <iostream>
+#include <vector>
+#include <string>
+
 using namespace std;
 
+struct Mahasiswa {
+    string nim;
+    float nilai;
+};
+
+class HashTable {
+private:
+    int size;
+    vector<vector<Mahasiswa>> table;
+
+    int hashFunction(string nim) {
+        int sum = 0;
+        for (char c : nim) {
+            sum += c;
+        }
+        return sum % size;
+    }
+
+public:
+    HashTable(int s) : size(s) {
+        table.resize(size);
+    }
+
+    void addData(Mahasiswa mhs) {
+        int index = hashFunction(mhs.nim);
+        for (Mahasiswa& data : table[index]) {
+            if (data.nim == mhs.nim) {
+                cout << "Mahasiswa dengan NIM tersebut sudah ada." << endl;
+                return;
+            }
+        }
+        table[index].push_back(mhs);
+    }
+
+    void removeData(string nim) {
+        int index = hashFunction(nim);
+        for (int i = 0; i < table[index].size(); ++i) {
+            if (table[index][i].nim == nim) {
+                table[index].erase(table[index].begin() + i);
+                cout << "Mahasiswa dengan NIM " << nim << " telah dihapus." << endl;
+                return;
+            }
+        }
+        cout << "Mahasiswa dengan NIM tersebut tidak ditemukan." << endl;
+    }
+
+    void searchByNIM(string nim) {
+        int index = hashFunction(nim);
+        for (Mahasiswa& data : table[index]) {
+            if (data.nim == nim) {
+                cout << "NIM: " << data.nim << " Nilai: " << data.nilai << endl;
+                return;
+            }
+        }
+        cout << "Mahasiswa dengan NIM tersebut tidak ditemukan." << endl;
+    }
+
+    void searchByNilaiRange(float start, float end) {
+        bool found = false;
+        for (vector<Mahasiswa>& data : table) {
+            for (Mahasiswa& mhs : data) {
+                if (mhs.nilai >= start && mhs.nilai <= end) {
+                    cout << "NIM: " << mhs.nim << " Nilai: " << mhs.nilai << endl;
+                    found = true;
+                }
+            }
+        }
+        if (!found) {
+            cout << "Tidak ada mahasiswa dengan nilai dalam rentang " << start << " - " << end << endl;
+        }
+    }
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    HashTable hashTable(10);
+
+    while (true) {
+        cout << "\nPilihan Menu:" << endl;
+        cout << "1. Tambah Data Mahasiswa" << endl;
+        cout << "2. Hapus Data Mahasiswa" << endl;
+        cout << "3. Cari Data Mahasiswa berdasarkan NIM" << endl;
+        cout << "4. Cari Data Mahasiswa berdasarkan Rentang Nilai (80-90)" << endl;
+        cout << "5. Keluar" << endl;
+
+        int choice;
+        cout << "Masukkan pilihan Anda: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            Mahasiswa mhs;
+            cout << "Masukkan NIM mahasiswa: ";
+            cin >> mhs.nim;
+            cout << "Masukkan nilai mahasiswa: ";
+            cin >> mhs.nilai;
+            hashTable.addData(mhs);
+        }
+        else if (choice == 2) {
+            string nim;
+            cout << "Masukkan NIM mahasiswa yang akan dihapus: ";
+            cin >> nim;
+            hashTable.removeData(nim);
+        }
+        else if (choice == 3) {
+            string nim;
+            cout << "Masukkan NIM mahasiswa yang ingin dicari: ";
+            cin >> nim;
+            hashTable.searchByNIM(nim);
+        }
+        else if (choice == 4) {
+            cout << "Mahasiswa dengan nilai antara 80-90:" << endl;
+            hashTable.searchByNilaiRange(80, 90);
+        }
+        else if (choice == 5) {
+            cout << "Terima kasih, program selesai." << endl;
+            break;
+        }
+        else {
+            cout << "Pilihan tidak valid. Silakan pilih menu yang sesuai." << endl;
+        }
+    }
+
     return 0;
 }
+```
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%205/img/ss%20unguided1.1.png)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
+![240302_00h00m06s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%205/img/ss%20unguided1.2.png)
+
+Kode di atas digunakan untuk menyimpan data mahasiswa. Hash table digunakan untuk mempercepat operasi pencarian, penambahan, dan penghapusan data dengan menggunakan fungsi hash untuk menentukan lokasi penyimpanan data dalam struktur tabel. Saat menambahkan data baru, fungsi hash digunakan untuk menentukan indeks tempat penyimpanan data sesuai dengan NIM mahasiswa. Jika terdapat tabrakan (collision), yaitu ketika dua data memiliki hasil hash yang sama, maka data tersebut akan disimpan dalam bentuk sebuah vektor di indeks yang sama.
+
+Setiap elemen hash table merupakan sebuah vektor yang berisi data mahasiswa. Operasi penambahan data memeriksa apakah mahasiswa dengan NIM yang sama sudah ada dalam vektor tersebut sebelum menambahkan data baru. Operasi penghapusan data mencari mahasiswa dengan NIM yang sesuai dan menghapusnya dari vektor. Operasi pencarian data berdasarkan NIM atau rentang nilai dilakukan dengan mencari data pada vektor yang sesuai dengan hasil hash dari NIM atau nilai yang diberikan. Jika data ditemukan, informasi mahasiswa beserta nilai-nilainya akan ditampilkan.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+![240309_10h21m35s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%205/img/ss%20full%20code.png)
 
 
 ## Kesimpulan
