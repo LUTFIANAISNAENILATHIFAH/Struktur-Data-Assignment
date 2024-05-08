@@ -4,7 +4,57 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Pengertian Stack
+
+Stack atau dalam Bahasa Indonesia diartikan tumpukan, adalah struktur data linier yang mengikuti prinsip Last In First Out (LIFO). Artinya elemen yang terakhir disisipkan akan menjadi elemen pertama yang keluar. Cara struktur data stack dalam menyimpan sebuah nilai dapat kita bayangkan seperti piring yang disusun rapi secara bertumpuk ke atas. Apabila ingin mengambil piring bagian bawah, harus terlebih dahulu menyisihkan semua piring yang ada di atas.
+
+Jenis-jenis Stack
+
+Berdasarkan kemampuan menyimpan data, struktur data stack dapat dibagi menjadi 2 jenis, yaitu: register stack dan memory stack.
+
+1. Register stack
+   
+Register stack merupakan stack yang hanya mampu menampung data dalam jumlah yang kecil. Kedalaman maksimum pada register stack cenderung dibatasi karena ukuran unit memorinya sangat kecil dibandingkan dengan memory stack.
+
+2. Memory stack
+   
+Pada stack jenis ini, kedalaman dari stack cukup fleksibel dan mampu menangani dalam dalam skala yang lebih besar dibandingkan jenis sebelumnya.
+
+Operasi-operasi Dasar pada Stack
+
+Ada beberapa operasi dasar yang bisa kita untuk lakukan terhadap struktur data stack. Operasi-operasi tersebut meliputi
+
+•	Push: Menyisipkan elemen ke bagian atas stack
+
+•	Pop: Menghapus elemen atas dari stack
+
+•	IsEmpty: Memeriksa apakah stack kosong
+
+•	IsFull: Memerika apakah stack sudah penuh
+
+•	Peek: Mendapatkan nilai elemen teratas tanpa menghapusnya [1]
+
+Berikut kelebihan dan kekurangan dari stack :
+
+1. Kelebihan
+   
+•	membantu mengelola data dengan metode LIFO
+
+•	secara otomatis membersihkan objek
+
+•	tidak mudah rusak
+
+•	ukuran variabel tidak dapat diubah
+
+•	mengontrol memori secara mandiri
+
+2. Kekurangan
+   
+•	memori stack sangat terbatas
+
+•	ada kemungkinan stack akan meluap atau overflow jika terlalu banyak objek
+
+•	tidak memungkinkan akses acak, karena harus mengeluarkan tumpukan paling atas terlebih dahulu untuk mengakses tumpukan paling bawah [2]. 
 
 ## Guided 
 
@@ -254,7 +304,12 @@ kode di atas digunakan untuk membalikkan urutan huruf dalam sebuah kalimat yang 
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Dengan prinsip Last In First Out (LIFO), stack adalah struktur data linier yang berguna untuk mengelola data dengan urutan yang terakhir dimasukkan akan menjadi yang pertama keluar. Ada dua jenis stack, yaitu register stack dan memory stack. Register stack hanya mampu menampung sedikit data karena batasan ukuran unit memorinya, sedangkan memory stack lebih fleksibel dan dapat menangani skala yang lebih besar. Operasi dasar pada stack meliputi push, pop, IsEmpty, IsFull, dan Peek.
+
+Kelebihan dari stack termasuk kemampuannya dalam mengelola data dengan metode LIFO, membersihkan objek secara otomatis, dan kontrol memori yang mandiri. Namun, kelemahannya adalah memori stack yang terbatas, risiko overflow jika terlalu banyak objek, dan tidak memungkinkan akses acak. Dengan demikian, stack merupakan struktur data yang efektif dalam beberapa konteks, terutama ketika urutan operasi yang terjadi penting, namun juga memiliki batasan dan risiko yang perlu dipertimbangkan dalam penggunaannya.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1]	Trivusi, “Struktur Data Stack Pengertian, Karakteristik, dan Kegunaannya,” pp. 1–1, Oct. 2022.
+
+[2]	Maulana Adieb, “Memahami Stack Struktur Data yang Memudahkan Programmer Jalankan Tugasnya,” pp. 1–1, Feb. 2021.
+ 
