@@ -1,9 +1,10 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
-<p align="center">Arvinanto Bahtiar</p>
+# <h1 align="center">Laporan Praktikum Modul VII QUEUE</h1>
+<p align="center">Lutfiana Isnaeni Lathifah 2311102165</p>
 
 ## Dasar Teori
+Queue disebut juga antrian dimana data masuk di satu sisi dan keluar di sisi yang lain. Karena  itu, queue bersifat FIFO (FirstIn FirstOut). Antrian (Queue) merupakan suatu kumpulan data yang penambahan elemennya (masuk antrian) hanya bisa dilakukan pada suatu ujung (disebut dengan sisi belakang/rear) atau disebut juga enqueue yaitu apabila seseorang masuk ke dalam sebuah antrian. Jika seseorang keluar dari antrian/penghapusan (pengembalian elemen) dilakukan lewat ujung yang lain (disebut dengan sisi depan/front) atau disebut juga dequeue yaitu apabila seseorang keluar dari antrian. Jadi, dalam antrian menggunakan prinsip “masuk pertama keluar pertama” atau disebut juga dengan prinsip FIFO (first in first out). Dengan kata lain, urutan keluar akan sama dengan urutan masuknya [1].
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Sistem antrian adalah teori yang menyangkut studi matematis dari antrian–antrian atau baris–baris penungguan. Formasi baris–baris penungguan ini tentu saja merupakan suatu pelayanan melebihi kapasitas yang tersedia apabila kebutuhan akan suatu pelayanan melebihi kapasitas yang tersedia untuk menyelenggarakan pelayanan itu [2].
 
 ## Guided 
 
@@ -369,7 +370,9 @@ tersebut dengan menambahkan, menghapus, dan menampilkan elemen dalam antrian.
 ![240309_10h21m35s_screenshot](https://github.com/LUTFIANAISNAENILATHIFAH/Struktur-Data-Assignment/blob/main/Modul%207/img/ss%20ful%20program%20unguided%202.png)
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Queue merupakan struktur data yang bersifat FIFO (First In First Out), di mana elemen data ditambahkan di satu ujung (rear) dan dihapus di ujung lain (front). Proses penambahan elemen disebut enqueue, sementara proses penghapusan elemen disebut dequeue. Sistem antrian mempelajari formasi dan dinamika baris penungguan, khususnya dalam konteks pelayanan yang melebihi kapasitas yang tersedia, sehingga memerlukan analisis matematis untuk pengelolaannya. Dengan demikian, antrian memastikan bahwa elemen yang pertama masuk adalah elemen yang pertama keluar, menjaga urutan proses sesuai dengan kedatangan.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1]	Agam Rizky, “PENERAPAN ALGORITMA QUEUE PADA APLIKASI PEMESANAN OBAT BERBASIS MOBILE PADA APOTEK ARUBA FARMA DEPOK,” pp. 1168-1177, Aug. 2023.
+
+[2]	Yovi Apridiansyah(, “Aplikasi Antrian Pembayaran Uang Kuliah Berbasis Android Menggunakan Algoritma Fifo Di Universitas Muhammadiyah Bengkulu,” vol. 3, pp. 91–103, Jul. 2021.
