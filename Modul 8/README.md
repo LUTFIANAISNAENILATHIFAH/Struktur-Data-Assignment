@@ -3,7 +3,32 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Algoritma pencarian(searching algorithm) merupakan langkah-langkah atau metode untuk mencari elemen tertentu. Algoritma pencarian digunakan untuk menemukan elemen tertentu dalam kumpulan atau struktur data seperti array, daftar, atau pohon. Terdapat 2 metode dalam algoritma searching, yaitu : [1] 
+
+1.	Sequential Search
+
+Algoritma Sequential search Algoritma Sequential search atau bisa juga disebut pencarian linear atau linear search adalah algoritma pencarian sederhana yang pencariannya dilakukan secara beruntun. Algoritma beruntun merupakan proses yang membandingkan tiap elemen larik satu persatu berurutan, mulai dari elemen awal, sampai dengan elemen yang dicari bisa ditemukan. Algoritma ini bekerja dengan mencocokkan data pada database dengan data yang dicari pencarian dilakukan secara beruntun dari data awal hingga data terakhir. 
+
+Langkah-langkah pencarian dengan sequential search: 
+
+•	Melakukan perbandingan beruntun pada kumpulan data dengan menggunakan keyword atau kata kunci yang akan dicari
+
+•	Pencarian ini melakukan looping atau pengulangan dari data pertama hingga jumlah data ke-n 
+
+
+•	 Setiap perulangan dilakukan pencocokan data dengan kata kunci yang dicari 
+
+•	Apabila terdapat kecocokan data dengan kata kunci yang di cari maka data berhasil ditemukan dan pencarian di hentikan, sebaliknya apabila tidak ada kecocokan data hingga data terakhir maka pencarian dihentikan dan data tidak ditemukan
+
+
+2.	Binary Search
+
+Binary search adalah algoritma yang dikembangkan dengan ide dasar berbeda untuk menangani masalah pencarian data pada pemrograman. Binary search bekerja dengan baik untuk pencarian data yang sudah terurut. Berikut langkah-langkah pencarian binary search : 
+
+•	Mengurutkan data terlebih dahulu bisa secara ascending (dari depan ke belakang) atau descending (dari belakang ke depan). 
+
+•	Membagi dua array atau keseluruhan data. Apabila data yang dicari lebih kecil dari data yang terletak di tengah, maka pencarian data akan berlanjut kesebelah kiri. Apabila data yang dicari lebih besar dari data terletak ditengah, maka pencarian data akan berlanjut kesebelah kanan kemudian proses pencarian tersebut akan terus berulang sampai data yang dimaksud atau dicari dapat ditemukan [2].
+
 
 ## Guided 
 
@@ -291,7 +316,26 @@ Kode di atas digunakan untuk melakukan pencarian berurutan (Sequential Search) d
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+ Algoritma pencarian adalah metode yang digunakan untuk menemukan elemen tertentu dalam kumpulan atau struktur data seperti array, daftar, atau pohon. Dua algoritma pencarian yang umum digunakan adalah Sequential Search dan Binary Search.
 
+Sequential Search:
+
+- Algoritma ini melakukan pencarian dengan cara membandingkan setiap elemen dalam data secara berurutan, mulai dari elemen pertama hingga elemen terakhir.
+  Langkah-langkah Sequential Search meliputi: membandingkan elemen satu per satu dengan kata kunci yang dicari, melakukan pengulangan dari data pertama hingga data ke-n, dan menghentikan pencarian jika data ditemukan atau jika telah mencapai akhir data tanpa menemukan kecocokan.
+  
+- Sequential Search tidak memerlukan data yang terurut dan cocok digunakan untuk dataset yang kecil atau tidak terurut.
+
+Binary Search:
+
+- Binary Search digunakan pada data yang sudah terurut, baik secara ascending maupun descending.
+  
+- Algoritma ini bekerja dengan membagi data menjadi dua bagian dan menentukan arah pencarian berdasarkan perbandingan elemen tengah dengan elemen yang dicari. Proses ini berulang hingga data ditemukan atau dipastikan tidak ada dalam dataset.
+  
+- Binary Search lebih efisien dibandingkan Sequential Search untuk dataset yang besar dan terurut karena mengurangi jumlah perbandingan yang diperlukan.
+
+Jadi Sequential Search dan Binary Search adalah dua metode pencarian yang memiliki kelebihan dan kekurangan masing-masing. Sequential Search sederhana dan tidak memerlukan data terurut, tetapi kurang efisien untuk dataset besar. Binary Search lebih efisien untuk dataset besar, namun hanya dapat digunakan pada data yang sudah terurut. Pemilihan algoritma tergantung pada kondisi data dan kebutuhan efisiensi pencarian.
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1]	Luthfi Delvian, “STRATEGI ALGORITMA - ALGORITMA PENCARIAN,” pp. 1–5, Jan. 2024.
+
+[2]	C. P. P. S. D. T. I. Dian Markuci, “ANALISIS PERBANDINGAN PENGGUNAAN ALGORITMA SEQUENTIAL SEARCH DAN BINARY SEARCH PADA APLIKASI SURAT PERJALANAN DI,” vol. 6, pp. 110–119, Feb. 2022.
+
