@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul 8 Algoritma Searching </h1>
 <p align="center"> Lutfiana Isnaeni Lathifah 2311102165 </p>
 
 ## Dasar Teori
