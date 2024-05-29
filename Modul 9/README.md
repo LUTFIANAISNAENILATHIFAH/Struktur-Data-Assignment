@@ -3,7 +3,48 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Graph (Graf) 
+Graf adalah kumpulan noktah (simpul) di dalam bidang dua dimensi yang dihubungkan dengan sekumpulan garis (sisi). Graph dapat digunakan untuk merepresentasikan objek-objek diskrit dan hubungan antara objekobjek tersebut. Representasi visual darigraph adalah dengan menyatakan objek sebagai noktah, bulatan atau titik (Vertex), sedangkan hubungan antara objek dinyatakan dengan garis (Edge). 
+
+ G = (V, E)
+
+ Dimana
+ 
+ G = Graph V = Simpul atau Vertex, atau Node, atau Titik 
+ 
+ E = Busur atau Edge, atau arc
+
+ Graf merupakan suatu cabang ilmu yang memiliki banyak terapan. Banyak sekali struktur yang bisa direpresentasikan dengan graf, dan banyak masalah yang bisa diselesaikan dengan bantuan graf. Seringkali graf digunakan untuk merepresentasikan suaru jaringan. Misalkan jaringan jalan raya dimodelkan graf sebagai simpul (vertex/node) dan jalan yang menghubungkan setiap kotanya sebagai sisi (edge) yang bobotnya (weight) adalah panjang dari jalan tersebut. Ada beberapa cara untuk menyimpan graph di dalam sitem komputer. Struktur data bergantung pada struktur graph dan algoritma yang digunakan untuk memmanipulasi graph. Secara teori salah satu dari keduanya dapat dibedakan antara struktur list dan matriks, tetapi dalam penggunaannya struktur terbaik yang sering digunakan adalah kombinasi keduanya.
+ 
+• Graph tak berarah (undirected graph atau non-directed graph) 
+
+• Urutan simpul dalam sebuah busur tidak dipentingkan. Misal busur e1 dapat disebut busur AB atau BA 
+
+• Graph berarah (directed graph) :
+
+ • Urutan simpul mempunyai arti. Misal busur AB adalah e1 sedangkan busur BA adalah e8. 
+ 
+• Graph Berbobot (Weighted Graph)
+
+• Jika setiap busur mempunyai nilai yang menyatakan hubungan antara 2 buah simpul, maka busur tersebut dinyatakan memiliki bobot.
+
+ • Bobot sebuah busur dapat menyatakan panjang sebuah jalan dari 2 buah titik, jumlah rata-rata kendaraan perhari yang melalui sebuah jalan, dll. 
+ 
+Operasi yang diterapkan pada non linier struktur data :
+
+- Menambahkan Elemen
+   
+- Menghapus elemen
+  
+- Tampil unsur-unsur
+  
+- Mengurutkan daftar elemen [1]
+
+Tree 
+
+pohon (tree) adalah konsep yang paling terkenal dan cukup penting dibandingkan konsep lainnya yang ada dalam teori graf, karena mampu menyelesaikan permasalahan dalam berbagai terapan masalah graf, misalnya konsep pohon merentang (Spanning Tree) yang digunakan oleh perusahaan kereta api dalam menentukan jalur yang akan dilalui oleh kereta, dengan mempertimbangkan bobot biaya yang minimum. Jika konsep spanning tree digunakan untuk menyelesaikan suatu permasalahan dengan unsur pencarian bobot minimum pada sebuah graf berbobot, maka akan disebut sebagai MST (Minimum Spanning Tree).
+Terdapat 2 jenis algoritma yang dapat digunakan untuk menyelesaikan permasalahan Minimum Spanning Tree (MST) yaitu algoritma prim dan kruskal [3]. Pada paper ini akan berfokus pada 2 jenis algoritma tersebut. Tujuannya adalah untuk menjelaskan secara rinci cara kerjanya kemudian membandingkan running time, CPU consumption, dan memory consumption dari kedua algoritma tersebut, serta menerapkannya pada bahasa pemrograman C [2].
+
 
 ## Guided 
 
@@ -1078,7 +1119,20 @@ Selain itu, terdapat fungsi tambahan seperti displayChildren untuk menampilkan a
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Graf adalah struktur data yang terdiri dari simpul (vertex) dan sisi (edge) yang menghubungkan simpul-simpul tersebut. Graf dapat berupa tak berarah, berarah, atau berbobot, dengan berbagai aplikasi seperti jaringan jalan raya.
 
+Tree adalah jenis khusus dari graf yang tidak memiliki siklus dan sering digunakan untuk menyelesaikan masalah seperti Minimum Spanning Tree (MST). MST menemukan pohon merentang dengan total bobot minimum dalam graf berbobot.
+
+Dua algoritma utama untuk MST adalah Prim dan Kruskal:
+
+- *Prim*: Memulai dari satu simpul, menambahkan sisi dengan bobot terkecil yang menghubungkan simpul terpilih dengan simpul yang belum terpilih.
+  
+- *Kruskal*: Memilih sisi dengan bobot terkecil dan menambahkannya ke pohon selama tidak membentuk siklus.
+
+Keduanya berbeda dalam hal running time, penggunaan CPU, dan konsumsi memori, yang penting dalam aplikasi praktis dan pemrograman, seperti dalam bahasa C.
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002
+
+[1]	M. Rian Safei, “PENGERTIAN STRUKTUR DATA NON LINEAR,” pp. 17–21, 2019.
+
+[2]	D. B. S. Hendarman Lubis, “ALGORITMA PRIM DAN KRUSKAL DALAM MENCARI MINIMUM SPANNING TREE PADA BAHASA PEMROGRAMAN C,” pp. 1–14, 2021.
+ 
